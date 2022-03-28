@@ -1,0 +1,20 @@
+{
+  "name": "micro-frontend-demo",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "workspaces": [
+    "Apps/*"
+  ],
+  "scripts": {
+    "start": "wsrun --parallel start",
+    "build": "yarn workspaces run build",
+    "dev": "wsrun --parallel dev",
+    "clean": "rimraf Apps/app1/dist && rimraf Apps/app2/dist"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "wsrun": "^5.2.0"
+  }
+}
